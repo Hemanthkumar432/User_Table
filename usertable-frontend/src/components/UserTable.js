@@ -15,7 +15,7 @@ const DataTable = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:9001/api/v1/users');
+      const response = await fetch('http://localhost:9001/users');
 
       const jsonData = await response.json();
        // console.log(jsonData)
@@ -24,8 +24,6 @@ const DataTable = () => {
       console.error(error);
     }
   };
-
-    
 
 
   const filteredData = data.filter((item) =>
